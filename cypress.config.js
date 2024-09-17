@@ -2,11 +2,11 @@ const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: 'https://cicero.oslo.no', // Define la URL base
-    viewportWidth: 1280,               // Configura el ancho del visor
-    viewportHeight: 720,               // Configura la altura del visor
+    baseUrl: 'https://cicero.oslo.no', // Definer basis-URL-en
+    viewportWidth: 1280,               // Angi bredden på skjermen
+    viewportHeight: 720,               // Angi høyden på skjermen 
     setupNodeEvents(on, config) {
-      // Puedes definir eventos adicionales aquí
+      // Du kan definere flere hendelser her
     },
   },
 });
