@@ -1,4 +1,4 @@
-describe('Test menu', () => {
+describe('Test NO menu', () => {
     it('Test NO menu', () => {
       cy.visit('/');
       cy.contains('CICERO').should('be.visible');  // Sjekk at teksten "CICERO" er synlig
@@ -8,7 +8,16 @@ describe('Test menu', () => {
       cy.contains('Ansatte').should('be.visible'); 
       cy.contains('Prosjekter').should('be.visible'); 
       cy.contains('Publikasjoner').should('be.visible'); 
-      cy.contains('Arrangementer').should('be.visible'); 
+      cy.contains('Arrangementer').should('be.visible');
+      
+      cy.contains('Søk').should('be.visible');
+   
+      
+
+      //by Class value
+      //cy.get('.styles_submitBtn__Rgj05'); 
+      //by Attribute name
+      //cy.get('[searchQuery]') ;
       
       //http://localhost:3000/no/om-oss
         
@@ -19,16 +28,18 @@ describe('Test menu', () => {
       //cy.get('.styles_menu__c9uXT > a:nth-child(5)').click();
      // cy.get('a:nth-child(6)').click();
      // cy.get('a:nth-child(7)').click();
+
       
     });
   
     it('Test under menu', () => {
       cy.visit('/');
+      cy.get('.styles_searchButton__POnF_ > span').click();
       //cy.get('nav').should('be.visible');
     });
   });
 
-  describe('Test menu', () => {
+  describe('Test EN menu', () => {
     it('Test EN menu', () => {
 
       cy.visit('/');
