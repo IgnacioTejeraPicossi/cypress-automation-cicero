@@ -35,7 +35,7 @@ describe('Test NO menu', () => {
     it('Test under menu', () => {
       cy.visit('/');
       cy.get('.styles_searchButton__POnF_ > span').click();
-      //cy.get('nav').should('be.visible');
+      cy.get('søk').should('be.visible');
     });
   });
 
