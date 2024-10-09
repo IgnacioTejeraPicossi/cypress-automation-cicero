@@ -24,7 +24,7 @@ describe('Test NO menu', () => {
       //cy.get('.styles_menu__c9uXT > a:nth-child(1)').click();
       //cy.get('a:nth-child(2)').click();
       //cy.get('.styles_menu__c9uXT > a:nth-child(3)').click();
-      //cy.get('.styles_menu__c9uXT > a:nth-child(4)').click();
+      //cy.get('.styles_menu__c9uXT > a:nth-child(4)').click();~La policia esta obligada
       //cy.get('.styles_menu__c9uXT > a:nth-child(5)').click();
      // cy.get('a:nth-child(6)').click();
      // cy.get('a:nth-child(7)').click();
@@ -33,9 +33,13 @@ describe('Test NO menu', () => {
     });
   
     it('Test under menu', () => {
-      cy.visit('/');
-      cy.get('.styles_searchButton__POnF_ > span').click();
-      cy.get('søk').should('be.visible');
+      cy.visit('/ansatte');
+      cy.contains('Ansatte').should('be.visible');~
+       /* ==== Test meny opsjon ==== */
+       cy.visit('http://localhost:3000/no');
+       cy.get('a:nth-child(2) .styles_title__Ha2Nn').click();
+       cy.contains('Ansatte');
+      
     });
   });
 
