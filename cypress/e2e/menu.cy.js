@@ -1,6 +1,6 @@
 describe('Test NO menu', () => {
     it('Test NO menu', () => {
-      cy.visit('/');
+      cy.visit('/no');
       cy.contains('CICERO').should('be.visible');  // Sjekk at teksten "CICERO" er synlig
       cy.contains('Om oss').should('be.visible'); 
       cy.contains('Magasinet Klima').should('be.visible'); 
@@ -32,14 +32,19 @@ describe('Test NO menu', () => {
       
     });
   
-    it('Test under menu', () => {
-      cy.visit('/ansatte');
+    
+    it('Test NO under menu', () => {
+      cy.visit('/');
+      cy.visit('http://localhost:3000/no/ansatte');
       cy.contains('Ansatte').should('be.visible');~
+
        /* ==== Test meny opsjon ==== */
-       cy.visit('http://localhost:3000/no');
+       cy.visit('/');
+       cy.visit('http://localhost:3000/no/ansatte');
        cy.get('a:nth-child(2) .styles_title__Ha2Nn').click();
        cy.contains('Ansatte');
       
+       
     });
   });
 
@@ -59,6 +64,19 @@ describe('Test NO menu', () => {
       cy.contains('Articles').should('be.visible'); 
       cy.contains('Publications').should('be.visible'); 
                   
+    });
+    it('Test EN under menu', () => {
+      cy.visit('/');
+      cy.visit('http://localhost:3000/en/employees');
+      cy.contains('employees').should('be.visible');~
+
+       /* ==== Test meny opsjon ==== */
+       cy.visit('/');
+       //div[normalize-space()='Ansatte']
+       cy.visit('http://localhost:3000/en/employees');
+       cy.get('a:nth-child(2) .styles_title__Ha2Nn').click();
+       cy.contains('employees');
+      
     });
   
   });
