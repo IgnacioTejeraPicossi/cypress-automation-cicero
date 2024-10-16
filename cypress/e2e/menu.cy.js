@@ -29,7 +29,35 @@ describe('Test NO menu', () => {
      // cy.get('a:nth-child(6)').click();
      // cy.get('a:nth-child(7)').click();
 
+
+      //1 by Tag name
+      cy.get('input');
       
+      //2 by ID
+      cy.get('#inputEmail1');
+      
+      //3 by Class value
+      cy.get('.input-full-width');
+      
+      //4 by Attribute name
+      cy.get('[fullwidth]');
+      
+      //5 by Attribute and value
+      cy.get('[placeholder="Email"]');
+      
+      //6 by entire Class value
+      cy.get('[class="input-full-width size-medium shape-rectangle"]');
+
+      //7 by two attributes
+      cy.get('[placeholder="Email"][fullwidth]');
+
+      //8 by tag, attribute id and class
+      cy.get('input[placeholder="Email"]#inputEmail1.input-full-width]');
+
+      //9 by cypress test ID
+      cy.get('[data-cy="inputEmail1"]');
+      
+
     });
   
     
