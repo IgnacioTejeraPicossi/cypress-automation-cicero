@@ -13,55 +13,37 @@ describe('Test NO menu', () => {
       cy.contains('Søk').should('be.visible');
    
       
-
-      //by Class value
-      //cy.get('.styles_submitBtn__Rgj05'); 
-      //by Attribute name
-      //cy.get('[searchQuery]') ;
-      
-      //http://localhost:3000/no/om-oss
-        
-      //cy.get('.styles_menu__c9uXT > a:nth-child(1)').click();
-      //cy.get('a:nth-child(2)').click();
-      //cy.get('.styles_menu__c9uXT > a:nth-child(3)').click();
-      //cy.get('.styles_menu__c9uXT > a:nth-child(4)').click();~La policia esta obligada
-      //cy.get('.styles_menu__c9uXT > a:nth-child(5)').click();
-     // cy.get('a:nth-child(6)').click();
-     // cy.get('a:nth-child(7)').click();
-
-
       //1 by Tag name
-      cy.get('input');
+      //cy.get('input');
       
       //2 by ID
-      cy.get('#inputEmail1');
+      //cy.get('#inputEmail1');
       
       //3 by Class value
-      cy.get('.input-full-width');
+      //cy.get('.input-full-width');
       
       //4 by Attribute name
-      cy.get('[fullwidth]');
+      //cy.get('[fullwidth]');
       
       //5 by Attribute and value
-      cy.get('[placeholder="Email"]');
+      //cy.get('[placeholder="Email"]');
       
       //6 by entire Class value
-      cy.get('[class="input-full-width size-medium shape-rectangle"]');
+      //cy.get('[class="input-full-width size-medium shape-rectangle"]');
 
       //7 by two attributes
-      cy.get('[placeholder="Email"][fullwidth]');
+      //cy.get('[placeholder="Email"][fullwidth]');
 
       //8 by tag, attribute id and class
-      cy.get('input[placeholder="Email"]#inputEmail1.input-full-width]');
+      //cy.get('input[placeholder="Email"]#inputEmail1.input-full-width]');
 
       //9 by cypress test ID
-      cy.get('[data-cy="inputEmail1"]');
+      //cy.get('[data-cy="inputEmail1"]');
       
 
     });
-  
-    
-    it('Test NO under menu', () => {
+   
+    it('Test NO under menu ansatte', () => {
       cy.visit('/');
       cy.visit('http://localhost:3000/no/ansatte');
       cy.contains('Ansatte').should('be.visible');~
@@ -71,7 +53,20 @@ describe('Test NO menu', () => {
        cy.visit('http://localhost:3000/no/ansatte');
        cy.get('a:nth-child(2) .styles_title__Ha2Nn').click();
        cy.contains('Ansatte');
-      
+     
+       
+    });
+    it('Test NO under menu prosjekter', () => {
+      cy.visit('/');
+      cy.visit('http://localhost:3000/no/prosjekter');
+      cy.contains('Ansatte').should('be.visible');~
+
+       /* ==== Test meny opsjon ==== */
+       cy.visit('/');
+       cy.visit('http://localhost:3000/no/prosjekter');
+       cy.get('a:nth-child(2) .styles_title__Ha2Nn').click();
+       cy.contains('prosjekter');
+    
        
     });
   });
@@ -93,7 +88,7 @@ describe('Test NO menu', () => {
       cy.contains('Publications').should('be.visible'); 
                   
     });
-    it('Test EN under menu', () => {
+    it('Test EN under menu employees', () => {
       cy.visit('/');
       cy.visit('http://localhost:3000/en/employees');
       cy.contains('employees').should('be.visible');~
@@ -106,7 +101,19 @@ describe('Test NO menu', () => {
        cy.contains('employees');
       
     });
-  
+    it('Test EN under menu Projects', () => {
+      cy.visit('/');
+      cy.visit('http://localhost:3000/en/Projects');
+      cy.contains('Ansatte').should('be.visible');~
+
+       /* ==== Test meny opsjon ==== */
+       cy.visit('/');
+       cy.visit('http://localhost:3000/no/Projects');
+       cy.get('a:nth-child(2) .styles_title__Ha2Nn').click();
+       cy.contains('Projects');
+      
+       
+    });
   });
 
  // cy.visit('http://localhost:3000/no');
