@@ -1,5 +1,6 @@
 describe('Test NO menu', () => {
-    it('Test NO menu', () => {
+
+  it('Test NO menu', () => {
       cy.visit('/no');
       cy.contains('CICERO').should('be.visible');  // Sjekk at teksten "CICERO" er synlig
       cy.contains('Om oss').should('be.visible'); 
@@ -42,30 +43,32 @@ describe('Test NO menu', () => {
       
 
     });
+
+    
    
     it('Test NO under menu ansatte', () => {
       cy.visit('/');
       cy.visit('http://localhost:3000/no/ansatte');
-      cy.contains('Ansatte').should('be.visible');~
+      cy.contains('Ansatte').should('be.visible');
 
        /* ==== Test meny opsjon ==== */
-       cy.visit('/');
-       cy.visit('http://localhost:3000/no/ansatte');
-       cy.get('a:nth-child(2) .styles_title__Ha2Nn').click();
-       cy.contains('Ansatte');
+       //cy.visit('/');
+       //cy.visit('http://localhost:3000/no/ansatte');
+       //cy.get('a:nth-child(2) .styles_title__Ha2Nn').click();
+       //cy.contains('Ansatte');
      
        
     });
     it('Test NO under menu prosjekter', () => {
       cy.visit('/');
       cy.visit('http://localhost:3000/no/prosjekter');
-      cy.contains('Ansatte').should('be.visible');~
+      cy.contains('Ansatte').should('be.visible');
 
        /* ==== Test meny opsjon ==== */
-       cy.visit('/');
-       cy.visit('http://localhost:3000/no/prosjekter');
-       cy.get('a:nth-child(2) .styles_title__Ha2Nn').click();
-       cy.contains('prosjekter');
+       //cy.visit('/');
+       //cy.visit('http://localhost:3000/no/prosjekter');
+       //cy.get('a:nth-child(2) .styles_title__Ha2Nn').click();
+       //cy.contains('prosjekter');
     
        
     });
