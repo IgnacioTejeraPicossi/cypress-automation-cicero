@@ -72,13 +72,45 @@ describe('Test NO menu', () => {
     it('Test NO under menu Tema', () => {
       cy.visit('/');
       cy.visit('http://localhost:3000/no/tema');
-      cy.contains('Tema').should('be.visible');~
+      cy.contains('Tema').should('be.visible');
 
-       /* ==== Test meny opsjon ==== */
-       cy.visit('/');
-       cy.visit('http://localhost:3000/no/tema');
-       cy.get('a:nth-child(2) .styles_title__Ha2Nn').click();
-       cy.contains('Tema');
+      /* ==== Test meny opsjon ==== */
+      //cy.visit('/');
+      //cy.visit('http://localhost:3000/no/tema');
+      //cy.get('a:nth-child(2) .styles_title__Ha2Nn').click();
+      //cy.contains('Tema');      
+
+
+      cy.visit('/');
+      cy.visit('http://localhost:3000/no/tema/aksept');
+      cy.contains('Aksept').should('be.visible');
+
+      cy.visit('/');
+      cy.visit('http://localhost:3000/no/tema/arealbruk');
+      cy.contains('Arealbruk').should('be.visible');
+
+      cy.visit('/');
+      cy.visit('http://localhost:3000/no/tema/arktis');
+      cy.contains('Arktis').should('be.visible');
+
+      cy.visit('/');
+      cy.visit('http://localhost:3000/no/tema/co2-utslipp-globalt');
+      cy.contains('CO2-utslipp globalt').should('be.visible');
+
+      cy.visit('/');
+      cy.visit('http://localhost:3000/no/tema/co2-utslipp-i-norge');
+      cy.contains('CO2-utslipp i Norge').should('be.visible');
+
+      cy.visit('/');
+      cy.visit('http://localhost:3000/no/tema/ekstremvaer');
+      cy.contains('Ekstremvær').should('be.visible');
+
+      cy.visit('/');
+      cy.visit('http://localhost:3000/no/tema/energiforbruk');
+      cy.contains('Energiforbruk').should('be.visible');
+
+
+       
            
     });
   });
