@@ -1,6 +1,6 @@
 # Cypress Test Automation Project
 
-This project contains automated tests using Cypress for testing web applications across different devices and screen resolutions.
+This project contains automated tests using Cypress for testing web applications 'Cicero' across different devices, screen resolutions and Interface.
 
 ## Project Overview
 
@@ -33,10 +33,17 @@ npm install
 cypres-automation-cicero/
 ├── cypress/
 │   └── e2e/
-│       └── visores.cy.js    # Responsive design tests
-├── cypress.config.js        # Cypress configuration
-├── package.json             # Project dependencies and scripts
-└── README.md               # Project documentation
+│       ├── visores.cy.js          # Responsive design tests
+│       ├── tema_search_spec.cy.js # Theme search functionality tests
+│       ├── search_spec.cy.js      # Search functionality tests
+│       ├── menuNor.cy.js          # Norwegian menu navigation tests
+│       ├── menuEng.cy.js          # English menu navigation tests
+│       ├── homepage.cy.js         # Homepage tests
+│       ├── form.cy.js             # Form interaction tests
+│       └── navigation.cy.js       # General navigation tests
+├── cypress.config.js              # Cypress configuration
+├── package.json                   # Project dependencies and scripts
+└── README.md                      # Project documentation
 ```
 
 ## Running Tests
@@ -58,6 +65,10 @@ The test suite includes responsive design tests for:
 - Navigation visibility across different devices
 - Screen resolution compatibility
 - Cross-device compatibility
+- Search functionality
+- Menu navigation in multiple languages
+- Form interactions
+- Homepage elements
 
 ## Dependencies
 
