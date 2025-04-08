@@ -1,6 +1,6 @@
 # Cypress Test Automation Project
 
-This project contains automated tests using Cypress for testing web applications across different devices and screen resolutions.
+This project contains automated tests using Cypress for testing web applications 'Cicero' across different devices, screen resolutions and Interface.
 
 ## Project Overview
 
