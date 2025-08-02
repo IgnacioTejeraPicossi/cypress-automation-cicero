@@ -76,7 +76,7 @@ The test suite includes responsive design tests for:
 
 ## Author
 
-- Ignacio Tejera
+- Ignacio Tejera Picossi
 
 ## License
 
